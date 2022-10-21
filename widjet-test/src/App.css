@@ -1,0 +1,29 @@
+
+.App {
+  width: 450px;
+  height: 600px;
+  background-color: aliceblue;
+  overflow-y: scroll;
+}
+
+.tg_line {
+  text-align: center;
+  padding: 10px;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #ccccff 0%, #0066ff 100%);
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.App_tgwidget{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
