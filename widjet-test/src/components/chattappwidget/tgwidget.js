@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './chatappwidget.css';
 import channel from '../../services/pusher';
-import Messageline from '../messageline/tgmessageline';
+import TgMessageline from '../messageline/tgmessageline';
 
 export default function tgwidget() {
   const [messages, setMessages] = useState([]);
@@ -27,14 +27,23 @@ export default function tgwidget() {
   }, [lastmessages]);
 
   return (
-    <div className="tgwidget">
-      {messages.map((el, idx) => (
-        <Messageline
-          data={el}
-          key={idx}
-        />
-      ))}
-      telegrammwidget
+    <div>
+      {messages.length >= 1
+        ? (
+          <div className="tgwidget">
+            {messages.map((el, idx) => (
+              <TgMessageline
+                data={el}
+                key={idx}
+              />
+            ))}
+          </div>
+        )
+        : (
+          <div className="item tgwidget__text">
+            скоро тут будут сообщения
+          </div>
+        )}
     </div>
   );
 }

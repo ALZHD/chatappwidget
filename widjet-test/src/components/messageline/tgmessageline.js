@@ -22,9 +22,6 @@ export default function tgmessageline(props) {
   const [exactTime, setExactTime] = useState(formattedDate);
 
   // const formattedDate = formatter.format(time * 1000);
-
-  console.log(props.data);
-
   return (
     <div className="box">
       <div className="box__line">
